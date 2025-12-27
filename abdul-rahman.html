@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    body{
+
+      width: 100vh;
+      height: 100vh;
+      background:linear-gradient(#fff,#d8d5fa,#fff);
+
+    }
+    .password{
+      font-size: 30px;
+      width: 200px;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .button{
+      position: absolute;
+      left: 150px;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 20px;
+      border: none;
+    }
+    .btn{
+      font-weight: 800;
+      border-radius: 7px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .h{
+      position: absolute;
+      top: 10%;
+    }
+    .home-page{
+      max-width: 40vh;
+      max-height: 1500px;
+      background-color: #ffffff;
+      box-shadow:  0 5px 12px rgba(0,0,0,0.2) ;
+      border-radius: 40px;
+    }
+    img{
+      width: 300px;
+      height: 300px;
+      border-radius: 40px;
+    }
+    .s{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .body{
+      position: relative;
+      animation-name: ligali;
+      animation-duration:2s;
+      border-radius: 40px;
+      transition: ease;
+      left: 20%;
+      top: 0;
+    }
+    @keyframes ligali{
+      0%{top: 100%;left: 20%;}
+      100%{top: 0;left: 20%;}
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>latest news about Abdul-rahi ligali's family</h1>
+  <div class="body">
+    <label for="password">Input verification password:</label><br><br>
+
+    <input class="password" type="password" placeholder="password "><button class="button" onclick="btn()">check</button>
+    <p class="wrong"></p>
+  </div>
+  <div class="s">
+    <div class="home-page">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      
+    </div>
+    <div class="home-page">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      
+    </div>
+  </div>
+    <script>
+      
+      const button=document.querySelector('.button')
+      function btn(){
+        const password=document.querySelector('.password').value;
+
+        if (password==='abdulrahim'){
+        const body =document.querySelector('body').innerHTML="<h1 class='h'>the latest news about the children of abdulrahman</h1><a href='abdul-rahman.html'><button class='btn'>&leftarrow;</button></a>"
+        }
+        else{
+        document.querySelector('.wrong').innerHTML='<p>wrong wrong password prlease try again later</p>'
+        }
+      };
+    </script>
+  </div>
+</body>
+</html>

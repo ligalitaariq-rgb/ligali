@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my web</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: hsl(0, 0%, 95%);
+    }
+    h1{
+      color: hsl(240, 100%, 62%);
+    }
+    .body{
+      background-color: hsl(0, 0%, 100%);
+      text-align: center;
+      max-width: 350px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px hsl(0,0%,0%,0.3);
+    }
+    .income ,.btn{
+      font-size: 20px;
+      border-radius: 10px;
+      padding:10px;
+      border: none;
+    }
+    .btn{
+      background:linear-gradient(#fff,#cec2c2);
+    }
+    .slider-container {
+      width: 90%;
+      margin: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .card {
+      min-width: 250px;
+      height: 150px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: #fff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    button.prev, button.next {
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    .back-arrow{
+      position: absolute;
+      top: 40px;
+      left: 10px;
+      background-color: #000000;
+      border-radius: 7px;
+      
+    }
+    .back{
+      text-decoration: none;
+      font-size: 30px;
+      font: weight 800px;
+      color: #fff;
+      padding: 5px;
+    }
+    .back-arrow:active{
+      background-color: #fff;
+    }
+    .back:active{
+      color: #000000;
+    }
+    .ligals{
+      font-size:30px;
+      text-align: center;
+      padding: 10px;
+      border: solid;
+      background-color: #0047ed;
+      color: #eceeff;
+      position: absolute;
+      animation-name: ligali;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      border-radius: 40px;
+    }
+    @keyframes ligali{
+      0%{background-color: blue; top: 0%;left: 0%;}
+      25%{background-color: red; top: 0;left: 80%;}
+      50%{background-color: yellow; top: 90%;left: 80%;}
+      75%{background-color: rgb(38, 0, 255); top: 90%;left: 0%;}
+      100%{background-color: rgb(0, 255, 191); top: 0%;left: 0%;}    
+    }
+  </style>
+</head>
+<body>
+  <span class="back-arrow"><b><a href="index.html"class="back">&leftarrow;</a></b></span>
+  <div class="body">
+    <div class="intro">
+      <h1 class="are-you">
+        Are you a LIGALI. If you are you can confirm in the text-area below
+      </h1>
+    </div>
+    <div class="container">
+      <label  for="image">Input your name:</label><br><br>
+      <input class="income" type="text" placeholder="name please" onkeydown="
+      if(event.key==='Enter'){
+      me();
+      }
+      ">
+      <button class="btn" onclick="me()">click</button><br><br><br>
+      <h2 class="great"></h2> 
+    </div>
+    <div class="about">
+      <picture class="img"></picture>
+      <picture class="img2"></picture>
+      <p class="details"></p>
+    </div>
+  </div>
+  <div class="ligals">ligali</div>
+  <script>
+    const btn=document.querySelector('.btn');
+    
+    function me(){
+      
+      
+
+      let income=document.querySelector('.income').value;
+      income=income.trim();
+      let firstLetter =income.charAt(0);
+      firstLetter=firstLetter.toUpperCase();
+
+      let extraChar=income.slice(1);
+      extraChar=extraChar.toLowerCase();
+      income=firstLetter+extraChar
+      let family=income;
+      document.querySelector('.great').innerHTML=`Hello Ligali ${family} !!!. Welcome to the home of the ligali's.`;
+      let details;
+      let images;
+      let year=2025
+      let image;
+      let Age;
+      let personalty;
+      let Occupation1;
+      let Occupation2;
+      let Occupation3;
+      let primarySchool;
+      let month;
+      let secondarySchool;
+      let higherInstitution;
+      let children;
+      let married;
+      let day;
+      let parent;
+      
+      if(family==="Taariq"){
+        
+        Age=(year-2008);
+        Occupation1="A web developer"
+        Occupation2="An inventor"
+        Occupation3="An ENG."
+        primarySchool="An-nur primary school"
+        month="january"
+        secondarySchool="I.H.E.J.S.S"
+        higherInstitution="A.S.U.S.T.A"
+        children="___"
+        married="____"
+        day=15
+        parent="6th child of Alhaji Jamiu Ligali  .D. and the 1st child of Alhaja Risikat Adeyemi."
+        you();
+        document.querySelector('.img').innerHTML='<div class="slider-container"><button class="prev">⟨</button><div class="slider"><div class="card"><img src="image2.jpg" alt=""></div> <div class="card"><img src="image1.jpg" alt=""></div><div class="card"><img src="image3.jpg" alt=""></div><div class="card"><img src="image4.jpg" alt=""></div></div><button class="next">⟩</button></div>'
+
+        const slider = document.querySelector('.slider');
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+
+      next.onclick = () => {
+        slider.scrollBy({ left: 270, behavior: 'smooth' });
+      };
+
+      prev.onclick = () => {
+        slider.scrollBy({ left: -270, behavior: 'smooth' });
+      };
+
+        document.querySelector('.details').innerHTML=details;
+        
+      }
+      
+      else if(family==="Saudah"){ 
+        
+        Age=(year-2013);
+        Occupation1="___";
+        Occupation2="___";
+        Occupation3="___";
+        primarySchool="An-nur primary school";
+        month="sept";
+        secondarySchool="Ojo model";
+        higherInstitution="____";
+        children="___";
+        married="____";
+        day=21;
+        parent="8th child of Alhaji Jamiu Ligali  .D. and the 3rd child of Alhaja Risikat Adeyemi."
+        you()
+
+        document.querySelector('.img').innerHTML='<div class="slider-container"><button class="prev">⟨</button><div class="slider"><div class="card"><img src="saudah.jpg" alt=""></div> <div class="card"><img src="saudah2.jpg" alt=""></div><div class="card"><img src="saudah.jpg" alt=""></div><div class="card"><img src="saudah2.jpg" alt=""></div></div><button class="next">⟩</button></div>'
+
+        const slider = document.querySelector('.slider');
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+
+      next.onclick = () => {
+        slider.scrollBy({ left: 270, behavior: 'smooth' });
+      };
+
+      prev.onclick = () => {
+        slider.scrollBy({ left: -270, behavior: 'smooth' });
+      };
+        document.querySelector('.details').innerHTML=details;
+      }
+      else if(family==="Hudhayfah"){
+      
+        Age=(year-2008);
+        Occupation1="chin-chin produser";
+        Occupation2="A chef";
+        Occupation3="_____";
+        primarySchool="An-nur primary school";
+        month="December";
+        secondarySchool="Ojo model";
+        higherInstitution="____";
+        children="___";
+        married="____";
+        day=28;
+        parent="7th child of Alhaji Jamiu Ligali  .D. and the 2nd child of Alhaja Risikat Adeyemi.";
+          you()
+
+          document.querySelector('.img').innerHTML='<div class="slider-container"><button class="prev">⟨</button><div class="slider"><div class="card"><img src="image2.jpg" alt=""></div> <div class="card"><img src="image1.jpg" alt=""></div><div class="card"><img src="image3.jpg" alt=""></div><div class="card"><img src="image4.jpg" alt=""></div></div><button class="next">⟩</button></div>'
+
+          const slider = document.querySelector('.slider');
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+
+      next.onclick = () => {
+        slider.scrollBy({ left: 270, behavior: 'smooth' });
+      };
+
+      prev.onclick = () => {
+        slider.scrollBy({ left: -270, behavior: 'smooth' });
+      };
+        document.querySelector('.details').innerHTML=details;
+      }
+      else{
+        document.querySelector('.details').innerHTML='Sorry maybe you spelt your name wrongly or The name may not be known try another name '
+      }
+      function you(){ details="<div><p>Ho you ligali"+family+" .O. A well known member of the ligali's. And the"+parent+" </p><h2>ligali "+family+"'s .O. status.</h2><table border><tr><th>Educacational status</th><th>Age</th><th>Occupation</th><th>Marrital status</th></tr><tr><td>"+primarySchool+"</td><td>birthmonth= "+month+"</td><td>"+Occupation1+"</td><td>"+married+"</td></tr><tr><td>"+secondarySchool+" </td><td>birthday = "+day+"</td><td>"+Occupation2+"</td><td>"+children+"</td></tr><tr><td>"+higherInstitution+"</td><td> corrent age="+(Age)+"</td><td>"+Occupation3+"</td><td>_____</td></tr></table></div>";
+      return details;
+    }
+    }
+  </script>
+</body>
+</html>

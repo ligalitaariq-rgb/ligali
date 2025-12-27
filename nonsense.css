@@ -1,0 +1,48 @@
+body{
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      background:linear-gradient(#eceeff,#fbfafe,#eceeff);
+    }
+    .body .intro .are-you{
+      color: rgb(83, 6, 184);
+      text-align: center;color: rgb(83, 6, 184);
+      text-align: center;
+    }
+    .container .income, .btn,label{
+      position: absolute;
+      left: 30%;
+    }
+    .container .btn{
+      position: absolute;
+      left: 63%;
+      background:linear-gradient(#11f7a6,#0047ed);
+      transition: 0.2s ease;
+    }
+    .btn:hover{
+      background:linear-gradient(#6588d9,#65fac6);
+      color: #d6fbee;
+    }
+    .btn:active{
+      background:linear-gradient(#6a91ec,#30f7dc);
+    }
+    .income{
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+    }
+    .container .btn, .income{
+      padding: 20px;
+      border-radius: 30px;
+      border: none;
+    }
+    .container .income{
+      width: 35%;
+    }
+    .about{
+      position: absolute;
+      left: 10%;
+      right: 10%;
+    }
+    div{
+      font-family: Arial, Helvetica, sans-serif;
+      color: #024d33;
+    }
