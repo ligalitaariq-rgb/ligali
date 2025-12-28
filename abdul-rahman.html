@@ -4,96 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" href="pics (3).jpg">
   <style>
     
     body{
 
-      width: 100vh;
+      
       height: 100vh;
       background:linear-gradient(#fff,#d8d5fa,#fff);
 
     }
-    .password{
-      font-size: 30px;
-      width: 200px;
-      border-radius: 50px;
-      border: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .button{
-      position: absolute;
-      left: 150px;
-      padding: 10px;
-      font-size: 15px;
-      border-radius: 20px;
-      border: none;
-    }
-    .btn{
-      font-weight: 800;
-      border-radius: 7px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-    .h{
-      position: absolute;
-      top: 10%;
-    }
-    .home-page{
-      max-width: 40vh;
-      max-height: 1500px;
-      background-color: #ffffff;
-      box-shadow:  0 5px 12px rgba(0,0,0,0.2) ;
-      border-radius: 40px;
-    }
-    img{
-      width: 300px;
-      height: 300px;
-      border-radius: 40px;
-    }
-    .s{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
     .body{
-      position: relative;
+      background-color: #eeeeee;
+      text-align: center;
+      width: 80%;
+      min-height: 70%;
+      margin: auto;
+      margin-top: 100px;
+      padding: 40px;
+      border-radius: 30px;
+    }
+    .input{
+      background-color: #fff;
+      text-align: center;
+      width: 60%;
+      margin:auto;
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow:  15px 15px 15px rgb(109, 107, 107);
+    }
+    .design{
+      position:absolute;
       animation-name: ligali;
       animation-duration:2s;
       border-radius: 40px;
-      transition: ease;
-      left: 20%;
-      top: 0;
+      transition: ease 2s;
+      left: 15%;
+      top: 30%;
+      
     }
     @keyframes ligali{
-      0%{top: 100%;left: 20%;}
-      100%{top: 0;left: 20%;}
+      0%{top: 0; left: 15%};
+      100%{top: 30%;}
+    }
+    .s{
+      position: absolute;
+      top: 80%;
+    }
+    .password, .button{
+      border-radius: 15px;
+      border: none;
+      padding: 10px;
+      background-color: #f8f7ff;
+    }
+    .button{
+      b
     }
     
   </style>
 </head>
 <body>
-  <h1>latest news about Abdul-rahi ligali's family</h1>
   <div class="body">
-    <label for="password">Input verification password:</label><br><br>
+    <div class="design">
+    <h1>latest news about Abdul-rahim ligali's family</h1>
+    <div class="input">
+      <label for="password">Input verification password:</label><br><br>
 
-    <input class="password" type="password" placeholder="password "><button class="button" onclick="btn()">check</button>
-    <p class="wrong"></p>
-  </div>
-  <div class="s">
-    <div class="home-page">
-      <img src="#">
-      <img src="#">
-      <img src="#">
-      <img src="#">
-      
+      <input class="password" type="password" placeholder="password "><button class="button" onclick="btn()">check</button>
+      <p class="wrong"></p>
+      </div>
     </div>
-    <div class="home-page">
-      <img src="#">
-      <img src="#">
-      <img src="#">
-      <img src="#">
-      
+    <div class="s">
+      <div class="home-page">
+        <img src="#">
+        <img src="#">
+        <img src="#">
+        <img src="#">
+        
+      </div>
+      <div class="home-page">
+        <img src="#">
+        <img src="#">
+        <img src="#">
+        <img src="#">
+        
+      </div>
     </div>
   </div>
     <script>
